@@ -1,5 +1,7 @@
 # React
 
+### What is React?
+
 - What is React?
     - React is a JavaScript library
     - React *ultimate* purpose is to show content to users and handle user interaction.
@@ -68,3 +70,32 @@
     - We are using a bundler webpack in the project. Everything in here is a tiny universe.  
     - Create a react componet
     - Take a react componet and show it on the screen
+    
+    
+### What is JSX
+
+- What is JSX
+    - It looka likw html but it is not html. To make es2015 or higher or process jsx we use JSX. No browser understands JSX. It is converted into html using babel. 
+    - We can use the [link](https://babeljs.io/repl) to check how the processed code looks like.
+    - It is much easier to read and it is much easier to get the essence of what is going on.
+    - It is not required to use JSX in React but it is highly recommended.
+
+- JSX 
+    - Special dialect of JS (its not HTML!)
+    - Browsers don't understand JSX code!. We write JSX then run tolls to turn it into normal JS
+    - Very similar in form and function to HTML with a couple differences.
+    - We need to put the immediate opening html element next to return keyword while creating the element or else it will give error. 
+    - A better way to put it in parenthesis with opening paranthesis on the same line of return keyword.
+
+- JSX vs HTML
+    - Adding custom styling to an element uses different syntax.
+    - Adding a class to an element uses different syntax.
+    - JSX can reference JS variables.
+    - *HTML:* &lt;div style="background-clor: red;">&lt;/div> will be converted into *JSX* as &lt;div style={{backgroundcolor: 'red'}}>&lt;/div>
+    - First curly brace means that we want to referene a javascript varaiable inside of JSX. The second curly brace is meant javaScript object.
+    - In styling JSX we provide javascript object.
+    - We need to remove dash from any styling element in JSX
+    - Separate two stylings with a comma puntuation mark.
+    - As per community convention stylinh has single quotes for values but for other stuffs where character data is needed, double quotes is used.
+    - In JSX for class we use className at place for class. class is a javascript keyword and is used to define component. So to prevent the collison, and throwbacks we use className at place for class. Though this limitation will be gone as smart processes continue to evolve.
+    - JSX can very easily can reference javascript variable.
