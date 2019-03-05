@@ -4,7 +4,7 @@
     - React is a JavaScript library
     - React *ultimate* purpose is to show content to users and handle user interaction.
 
-- Why don't we use redux in the codepen app?
+- Why don't we use redux in the [codepen app](https://codepen.io/professorpandit/pen/rRVMjR)?
     - React can work by itself.
     - ...but it can also work with tremendous variety of other libraries, packages, servers, and databases.
 
@@ -64,7 +64,7 @@
     - and handles feedback from the user (Using Event Handlers)
 
 - Steps to display Content with Functional Components:
-    - // Import the React and ReactDOM librarires import React from 'react';
-    - //We are using a bundler webpack in the project. Everything in here is a tiny universe.  
+    - Import the React and ReactDOM librarires import React from 'react';
+    - We are using a bundler webpack in the project. Everything in here is a tiny universe.  
     - Create a react componet
     - Take a react componet and show it on the screen
