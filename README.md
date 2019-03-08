@@ -114,7 +114,35 @@
     - Component **Resusability**
         - We want to make components that can be easily reused through out application.
 
-    - Component **Configuration**
+    - Component **Configuartion**
         - We should be able to configure a component when it is created.
-- WE can leverage lot of available opesource libraries for small developement projects -
+- We can leverage lot of available opesource libraries for small developement projects -
     - [Semantic UI](https://semantic-ui.com/views/comment.html) is one of the css helpers. Thi link mentioned here is a page for comments. We have used a [CDN](https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css) mentioned in hyperlink
+    - We can use [faker.js](https://github.com/marak/Faker.js/) to generate massive amounts of realistic fake data in Node.js and the browser.
+
+- Creating a Reusable, Configurable Component
+    - Identify the JSX that appears to be duplicated
+    - What is the purpose of that block of JSX? Think of a descriptive name for what it does
+    - Create a new file to house this new component -  It should have the same name as the component
+    - Create a new component in the new file. Paste the JSX into it
+    - Make the new component configurable by using React's 'props' system.
+    
+- To be able to use the component, we have to accomplish two things:
+    - We will use export statemnt in component js file telling others that if you want access, we have got it covered.
+    - We will add import in index.js creating a link
+    - The technique is called nesting.
+    Since conponent is nested inside main app, app is parent component and imported component is child component.
+ - The technique is called nesting. Since conponent is nested inside main app, app is parent component and imported component is child component. 
+
+ - Props system can be used to customize the reusable components. Props system:
+    - System for passing data from a parent component to a child component.
+    - Goal is to customize or configure a child component.
+    - It will send a little bit of configuration. 
+    - A child cannot pass on the information to the parent element directly. It is generally about communicating informatiom from parent to child.
+    - There are two stages-
+        - parent component provides information
+        - Child component accepts information
+    - Name and value of the props are passed from parent: *&lt;ChildComponent propname="propvalue"/>* 
+    - We can referernce some javascript variable as well in place of propvalue.
+    - Props are referenced as arguments in child component definition javascript file.
+    - Component can be reused used props and closing tage similar to html.
