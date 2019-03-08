@@ -117,4 +117,4 @@
     - Component **Configuration**
         - We should be able to configure a component when it is created.
 - WE can leverage lot of available opesource libraries for small developement projects -
-    - [Semantic UI](https://semantic-ui.com/views/comment.html) is one of the css helpers. Thi link mentioned here is a page for comments. We have used a [CDN](https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css") mentioned in hyperlink
+    - [Semantic UI](https://semantic-ui.com/views/comment.html) is one of the css helpers. Thi link mentioned here is a page for comments. We have used a [CDN](https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css) mentioned in hyperlink
