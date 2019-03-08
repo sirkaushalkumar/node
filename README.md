@@ -97,5 +97,10 @@
     - We need to remove dash from any styling element in JSX
     - Separate two stylings with a comma puntuation mark.
     - As per community convention stylinh has single quotes for values but for other stuffs where character data is needed, double quotes is used.
-    - In JSX for class we use className at place for class. class is a javascript keyword and is used to define component. So to prevent the collison, and throwbacks we use className at place for class. Though this limitation will be gone as smart processes continue to evolve.
-    - JSX can very easily can reference javascript variable.
+    - In JSX for `class` we use `className` at place for `class`. `class` is a javascript keyword and is used to define component. So to prevent the collison, and throwbacks we use `className` at place for `class`. Though this limitation will be gone as smart processes continue to evolve.
+    - JSX can very easily  reference javascript variable. We can take a javascript variable and easily print it in JSX block (by uisng curly braces that is javascript variable).
+    - Specifically we can display anything as text or as value. Such as string, integer, array, set of number etc.
+    - But if we replave it with javascript object it is going to give error. For Objects are not valid as React Child.
+    We are not allowed to take a js object and reference it in jsx. But we can use key inside object in case needed.
+    We can also use style through this technique.
+    - There are certain keywords like class and for which can be misterpreted. as discussed above for class,for is too replaces with `htmlFor` as `for` can be interpreted as javascript for.
