@@ -104,3 +104,17 @@
     We are not allowed to take a js object and reference it in jsx. But we can use key inside object in case needed.
     We can also use style through this technique.
     - There are certain keywords like class and for which can be misterpreted. as discussed above for class,for is too replaces with `htmlFor` as `for` can be interpreted as javascript for.
+    
+### Communicating with props
+
+- Nesting, Reusability and Configuration are three tenants of React Ecosystem.
+    - Component **Nesting**
+        - A component can shown inside of another.
+
+    - Component **Resusability**
+        - We want to make components that can be easily reused through out application.
+
+    - Component **Configuration**
+        - We should be able to configure a component when it is created.
+- WE can leverage lot of available opesource libraries for small developement projects -
+    - [Semantic UI](https://semantic-ui.com/views/comment.html) is one of the css helpers. Thi link mentioned here is a page for comments. We have used a [CDN](<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />) mentioned in hyperlink
