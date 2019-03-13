@@ -146,3 +146,53 @@
     - We can referernce some javascript variable as well in place of propvalue.
     - Props are referenced as arguments in child component definition javascript file.
     - Component can be reused used props and closing tage similar to html.
+
+### Structuring Apps with Clas-Based Components
+
+- Functional Components are good good for simple content
+- Class Components are good for just about everything else.
+- 3 Benfits of Class Compenents
+    1. 1st Benefit:
+        - Easier Code organization
+    2. 2nd Benefit(s)
+        - can use 'state' (another React system)
+        - Easier to handle use input
+    3. 3rd Benefit(s)
+        - Understands lifecycle events
+        - Easier to do things when the app first starts.
+
+- Third Application Challenges
+    - Need to get the users physical location
+    - Need to determine the current month
+    - Need to change text and styling based on location + month
+ - App Components
+    - *App:* Has code to determine location + month
+    - *SeasonDisplay:* Shows different text/icons based on props
+
+- We can use [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) to get user location using JavaScript.
+
+- Application Lifecycle
+    - JS file loaded by browser
+    - App component gets created
+    - We call gelocation service
+    - App returns JSX, gets rendered to page as HTML
+    - ... .
+    - We get result of geolocation
+
+- The geolocation api takes few seconds to deliver the location parameters(javascript returns jsx and gets turned into html and it is faster than geolocation api). A class based component in conjuction with state system is a solution foe this issue to fix to get the coordinates.
+
+- New Lifecycle
+    - JS file loaded by browser
+    -  App component gets created
+    - We call gelocation service
+    - App returns JSX, gets rendered to page as HTML
+    - ... .
+    - We get result of geolocation
+    - Tell the component to rerender itself with the new information
+
+- Rules of Class Components
+    - Must be a Javascript class (introduced in es2015)
+    -  Must extend (subclass) React.Component
+    -  Must define a 'render' method that returns some amount of JSX
+
+- We are creating one class having only method render. We borrow other methods from React.Compoent into our class. In other words we are creating subclasses.
