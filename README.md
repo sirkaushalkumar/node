@@ -235,3 +235,29 @@
     - React calls our 'render' method a second time
     - Render method returns some (updated) JSX.
     - React takes that JSX and updates content on the screen.
+
+### Understanding Lifecycle Methods
+
+- There are two ways to initialize state. We are going to see second. To understand that we need to understand Lifecycle Method.
+- Component Lifecycle
+    - constructor
+    - render
+        - component visible on screen
+    - componentDidMount
+        - Sit and wait for updates... .
+    - componentDidUpdate
+        - Sit and wait until this component is no longer shown
+    - componentWillUnmount
+- This entire series of event id called compoent lifecycle.
+- These lifecycle methods are functions that are called during very distinct or discreet times during that cycle.
+- **Render** Method is one function hat we absolutely have to define.
+- First off immediately after a component shows up on the screen of our browser, a lifecycle method componentDidMount is called. We can use this method to put some amount of code inside to setup or do some initial data loading or a wide variety of operations that we might want to do.
+- Once this is called, our component essentially sits around and wait for an update. Update is going to come in the form of calling setState Method. The component will rerender itselfor essentially update itself. Anytime that happens another lifecycle method ComponentDidUpdate will be called automatically.
+- If at somepoint of time, we look to stop showing our component, ComponentDidUmnount will be called autmatically.
+
+- Why lifecycle methods
+    - *constructor:* Good Place to do one-time setup
+    - *render:* Avoid doing anything besides returning JSX
+    - *componentDidMount:* Good Place to do data-loading!
+    - *componentDidUpdate:* Good Place to domore data-loading when state/props change
+    - *componentWillUnmount:* Good Place to do cleanup (especially for non-React stuff)
