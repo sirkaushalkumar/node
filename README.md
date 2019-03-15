@@ -196,3 +196,42 @@
     -  Must define a 'render' method that returns some amount of JSX
 
 - We are creating one class having only method render. We borrow other methods from React.Compoent into our class. In other words we are creating subclasses.
+
+
+### State in React Components
+
+- Rules of State
+    - Only usable with class components. Technically can be used with functional components using the 'hooks system (to be discussed later)
+    - You will confuse props with state :(
+    - 'State' is a JS object that contains data relevant to a component
+    - Updating 'state' on a component causes the component to (almost) instantly rerender
+    - State must be initialized when a component is created.
+    - State can **only** be updated using the function 'setState'
+
+- We make sure that we initialize our state when the component is first created. We eventually make sure that we update our state with setState. 
+- We have a ceremonial thing to do in constructor i.e., calling super function. Base class has its sub class of its own. When we craete a class it overwrites. So to make sure that features rae called from called, we use super function.
+- Then we initialize our state object. It will contain some important and relevant data for app. We usually initialize variables with sensible values. Numeric values are defaulted with **null**.
+- Once we have assigned to its state, we can freely reference the state object and its properties inside of our app component.
+- Anytime we update our state object right gere, component will almost render itself.
+- We should not initialize any method or call in render methid that takes time.
+- To update our state object, we always use setState.
+- We called setState to update
+- We never do direct assignment.
+- Constructor function is optional, but if we create it, it is called first and it is mandatory to call super function inside it.
+- Render is a mandatory function, It must be called and it must return some JSX
+
+- App Lifecycle walkthrough
+    - JS file loaded by browser
+    - Instance of App component is created
+    - App components 'constructor function gets called
+    - State object is craeted and assigned to the 'this.state' property
+    - We called geolocation service
+    - React calls the components render method
+    - App returns JSX, gets rendered to page as HTML
+    - ...
+    - We get result of gelocation
+    - We update our state object with a call to 'this.setState'
+    - React sees that we updatws the state of a component
+    - React calls our 'render' method a second time
+    - Render method returns some (updated) JSX.
+    - React takes that JSX and updates content on the screen.
