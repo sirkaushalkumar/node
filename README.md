@@ -259,5 +259,26 @@
     - *constructor:* Good Place to do one-time setup
     - *render:* Avoid doing anything besides returning JSX
     - *componentDidMount:* Good Place to do data-loading!
-    - *componentDidUpdate:* Good Place to domore data-loading when state/props change
+    - *componentDidUpdate:* Good Place to do more data-loading when state/props change like a network request or input.
     - *componentWillUnmount:* Good Place to do cleanup (especially for non-React stuff)
+
+- We can do date loading in both render and componentDidMount function, but official documention and developers community convention asks not to do data loading in constructor function. This helps in writing more clear code. componentDidMount is perfect for initial dataloading and to kick off some outside process.
+
+- Other lifecycle methods (rarely used)
+    - shouldComponentUpdate
+    - getDerivedStateFromProps
+    - getSnapshotBeforeUpdate
+
+- We can use [babeljs](https://babeljs.io/repl) website to check the react code that is rendered as HTML online.
+- We can take state from a prop and pass it along the child. Anytime we call setState in parent componet, child component will also get updated. 
+
+- We use currly braces for javascript variable. We can also use it to refer to javascript expression.
+- We can provide default props, say if we have a spinner for loading and we miss to add message, them we can add following code:
+```
+Spinner.defaultProps = {
+    message: 'Loading....'
+}
+```
+- If no messags is provided, and no defualt props is available, then also it will work, but it is advisable as good practice to add these, we can also use props wih or operator to accomplish like `{props.message || 'Loading....}`
+- We should refrain from putting if else and similar code in render function.
+- Developers community asks to put component at botton after functional component, helper and config files.This is code organization.
