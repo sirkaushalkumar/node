@@ -282,3 +282,25 @@ Spinner.defaultProps = {
 - If no messags is provided, and no defualt props is available, then also it will work, but it is advisable as good practice to add these, we can also use props wih or operator to accomplish like `{props.message || 'Loading....}`
 - We should refrain from putting if else and similar code in render function.
 - Developers community asks to put component at botton after functional component, helper and config files.This is code organization.
+
+### Handling User Input with Forms and Events
+
+- Stuff to Still Figure Out
+    - How do we get feedback from the user
+    - How do we fetch data from some outside API or server
+    -  How do we show lists of records.
+
+- App Challenges
+    - Nedd to get a search term from the user
+    - Need to use that search term to make  a request to an outside API and fetch data
+    - Need to take the fetched images and show them on the screen in a list
+
+- To create an event handler, we create a callback function and to call it we use  event handller onChange method. We do not put parentheses in the method as we don't want it to render all the component. 
+- Basically we are passing a reference to this function to the input element so that the input can call at some point in the future.
+- So if someone types anything, a callback function is invoked and an argument event is passed along.
+- `event.target.value` will contain the value that the user will type in.
+- onChnage is an event which will be called whenever an user changes the input.
+- Common event handlers
+    - User clicks on something: *`onClick`*
+    - User chnages text in an input: *`onChange`*
+    - User submits a form: *`onSubmit`*
