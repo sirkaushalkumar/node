@@ -304,3 +304,22 @@ Spinner.defaultProps = {
     - User clicks on something: *`onClick`*
     - User chnages text in an input: *`onChange`*
     - User submits a form: *`onSubmit`*
+- However some other elements that we create will not support every single different callback that we can think of.
+- In other words we cannot really wire up in onChange callback to a div because a div does not ever get changes.
+- Likewise a div does not get submitted but a div can be clicked so we can wire up onClick handler to a div.
+- Event handlers name follows a community convention
+    - It starts with on
+    - It is followed by the element that we are assigning callback to
+    - Further it is followed by the event we are watching
+    - For example `onInputChange`
+    - Sometimes people often use handle at place of on viz., `handleInputChnage`, but on is more popular.
+    - We may choose any name otherwise but prop name cannot be altered.
+
+There is an alternative method where don't need to create a separte eventhandler but can create an arrow function approach where we will pass the event and perform the action as needed. This can be preferable approach when we have to execute a single line of code. Say we called the event handler like this way - `onChange = {this.onInputChange}` and we have event handler definition as follows:
+
+```
+onInputChnage(event){
+    console.log(event.target.value)
+}
+```
+- We can replace whole of this into this - `onChange = {(event) => console.log(event.target.value)}`.
