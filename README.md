@@ -323,3 +323,4 @@ onInputChange(event){
 }
 ```
 - We can replace whole of this into this - `onChange = {(event) => console.log(event.target.value)}`.
+- Sometime `event` is replaced with `e`.
