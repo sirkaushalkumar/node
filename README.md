@@ -318,7 +318,7 @@ Spinner.defaultProps = {
 There is an alternative method where don't need to create a separte eventhandler but can create an arrow function approach where we will pass the event and perform the action as needed. This can be preferable approach when we have to execute a single line of code. Say we called the event handler like this way - `onChange = {this.onInputChange}` and we have event handler definition as follows:
 
 ```
-onInputChnage(event){
+onInputChange(event){
     console.log(event.target.value)
 }
 ```
