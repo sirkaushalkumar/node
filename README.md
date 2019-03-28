@@ -297,9 +297,10 @@ Spinner.defaultProps = {
 
 - To create an event handler, we create a callback function and to call it we use  event handller onChange method. We do not put parentheses in the method as we don't want it to render all the component. 
 - Basically we are passing a reference to this function to the input element so that the input can call at some point in the future.
+- We pass an event which is an javascript object that contains event properties
 - So if someone types anything, a callback function is invoked and an argument event is passed along.
 - `event.target.value` will contain the value that the user will type in.
-- onChnage is an event which will be called whenever an user changes the input.
+- onChange is an event which will be called whenever an user changes the input.
 - Common event handlers
     - User clicks on something: *`onClick`*
     - User chnages text in an input: *`onChange`*
@@ -324,3 +325,33 @@ onInputChange(event){
 ```
 - We can replace whole of this into this - `onChange = {(event) => console.log(event.target.value)}`.
 - Sometime `event` is replaced with `e`.
+
+- There are two types of form elements viz.,
+    - controlled
+    - uncontrolled
+
+- As react developer, we should always use controlled form elements.
+- 
+
+We deleted the initial function and then we initialize a state object. It has a single property that we can refer as term and this can be defaulted to a empty string. The n onChange is replaces as: `onChange = {(e) => this.setState({e.target.value})}`. We will also use one more prop value initializinhg as `value ={this.state.term}`
+
+- Flow of the process:
+    - User types in input
+    - Callback gets invoked
+    - We call setState with the new value
+    - Component rerenders
+    - Input is told what its value is (coming from state)
+
+- we assign the value of the input to value prop. It essentially overwrites whatever text is already inside of input.
+
+- nThe enetire setup that we did is called controlled element. It sis because when we say `value = {this.state.term}` we basically shove the state term into input.
+
+- In uncontrolled element, say if we have find the value of an element at any time, we ened to reach into the DOM amd pull out the value. The key part to understand was that the value was inside our html but not in our react code.
+
+- We strive to centralize all the information that we have inside our react component. 
+- The good thing about this approach is that it makes doing ceratin steps pretty easy and pretty starightforward. 
+- For example, we can have specific text in an input, everytime our component renders. 
+- We can also create manipulation for every text that user eneters. Like we want to chnage everything to lowercase everytime, when user inputs the content. The syntax shall be `onChange={(e) => this.setState({ term: e.target.value.toLowerCase()})}`
+- Controlled verse is not only useful in text inputs, but in radio inputs, checkboxes as we.
+- Next step is to make sure that once user presses enter key, it should trigger search.
+- By default, on hit of enter key, browser attempts to submit the form to some back end server.
