@@ -1,5 +1,7 @@
 # React
 
+## Owner: kumar and team
+
 ### What is React?
 
 - What is React?
@@ -147,7 +149,7 @@
     - Props are referenced as arguments in child component definition javascript file.
     - Component can be reused used props and closing tage similar to html.
 
-### Structuring Apps with Clas-Based Components
+### Structuring Apps with Class-Based Components
 
 - Functional Components are good good for simple content
 - Class Components are good for just about everything else.
