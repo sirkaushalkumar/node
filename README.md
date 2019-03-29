@@ -1,7 +1,5 @@
 # React
 
-## Owner: kumar and team
-
 ### What is React?
 
 - What is React?
