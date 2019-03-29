@@ -201,7 +201,7 @@
 ### State in React Components
 
 - Rules of State
-    - Only usable with class components. Technically can be used with functional components using the 'hooks system (to be discussed later)
+    - Only usable with class components. Technically can be used with functional components using the 'hooks system' (to be discussed later)
     - You will confuse props with state :(
     - 'State' is a JS object that contains data relevant to a component
     - Updating 'state' on a component causes the component to (almost) instantly rerender
@@ -355,3 +355,15 @@ We deleted the initial function and then we initialize a state object. It has a 
 - Controlled verse is not only useful in text inputs, but in radio inputs, checkboxes as we.
 - Next step is to make sure that once user presses enter key, it should trigger search.
 - By default, on hit of enter key, browser attempts to submit the form to some back end server.
+- undefined is a value inside javascript. id we try to access some property of it, we are going to get error.
+- Two important questions on this keyword:
+    - What is `this` used for in a class
+    - How is the value of `this` determined in a function?
+
+- Consider a component. It has different properties like state, render, onFormSubmit inside of the component.
+- This a keyword that references back to the class itself.
+
+|Instance of Search Bar|
+|:---:|
+|<br/>state<br/>render<br/>onFormSubmit<br/>|
+|this|
