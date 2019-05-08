@@ -344,7 +344,7 @@ We deleted the initial function and then we initialize a state object. It has a 
 
 - we assign the value of the input to value prop. It essentially overwrites whatever text is already inside of input.
 
-- nThe enetire setup that we did is called controlled element. It sis because when we say `value = {this.state.term}` we basically shove the state term into input.
+- The entire setup that we did is called controlled element. It is because when we say `value = {this.state.term}` we basically shove the state term into input.
 
 - In uncontrolled element, say if we have find the value of an element at any time, we ened to reach into the DOM amd pull out the value. The key part to understand was that the value was inside our html but not in our react code.
 
@@ -367,3 +367,4 @@ We deleted the initial function and then we initialize a state object. It has a 
 |:---:|
 |<br/>state<br/>render<br/>onFormSubmit<br/>|
 |this|
+
