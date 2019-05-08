@@ -367,4 +367,3 @@ We deleted the initial function and then we initialize a state object. It has a 
 |:---:|
 |<br/>state<br/>render<br/>onFormSubmit<br/>|
 |this|
-
