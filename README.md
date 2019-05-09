@@ -360,6 +360,8 @@ We deleted the initial function and then we initialize a state object. It has a 
     - What is `this` used for in a class
     - How is the value of `this` determined in a function?
 
+- Uncontrolled element offers many advantages. Say for example one wishes to get the value of the input. In that case, the user will have to reach out to html body, get to the DOM element and retrieve the value from in there. Well there was a very small duration when the React was aware what the input was, but that was only when user typed in the input and our callback was invoked.
+
 - Consider a component. It has different properties like state, render, onFormSubmit inside of the component.
 - This a keyword that references back to the class itself.
 
